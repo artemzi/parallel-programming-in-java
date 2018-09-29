@@ -172,6 +172,7 @@ public final class ReciprocalArraySum {
      */
     protected static double parManyTaskArraySum(final double[] input,
                                                 final int numTasks) {
+        System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", String.valueOf(4));
         double sum = 0;
 
         // Compute sum of reciprocals of array elements
